@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
   *main: program to test printf
-  *return: 0  is success.
+  *Return: 0 (bsuccess).
   */
 int main(void)
 {
