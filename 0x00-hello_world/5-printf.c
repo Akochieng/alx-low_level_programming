@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
-  *main: program to test printf
-  *Return: 0 (bsuccess).
+  * main - program to test printf
+  * Return: 0 (bsuccess).
   */
 int main(void)
 {
