@@ -1,4 +1,4 @@
-i#include<stdio.h>
+#include<stdio.h>
 
 /**
   *Short code demonstrating functionality of sizeof
