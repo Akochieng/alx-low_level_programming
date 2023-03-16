@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 /**
   *Short code demonstrating functionality of sizeof
   */
