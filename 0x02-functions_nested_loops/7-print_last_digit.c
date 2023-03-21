@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
-  *main - prints the last digit of a number
+  *print_last_digit - prints the last digit of a number
   *
   *@n: input digit
   *Description: prints the last digit of a number twice
@@ -11,7 +11,12 @@ int print_last_digit(int n)
 {
 	while (n > 10)
 		n = n % 10;
-	n = n > 0 ? n : -n;
-	putchar(n);
+	if (n >= 0)
+		putchar(n);
+	else
+	{
+		n = -n;
+		putchar(n);
+	}
 	return (n);
 }
