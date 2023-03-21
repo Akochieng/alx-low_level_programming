@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
-  *Description: prints every minute of Jack Bauer's day
-  *Return: void
+  *jack_bauer - prints every minute of Jack Bauer's day
   *
+  *Description: prints every minute and hour of Jack Bauer's day
+  *Return: void
   */
 void jack_bauer(void)
 {
