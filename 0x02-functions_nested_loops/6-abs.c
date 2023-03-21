@@ -3,8 +3,8 @@
 /**
   *_abs - computes the absoulute value of an interger
   *
-  *int a - the input digit
-  *
+  *@a: interger whose absolute value is to be determined
+  *Description: function returns the absolute value of parameter a
   *Return: the absolute value
   */
 int _abs(int a)
