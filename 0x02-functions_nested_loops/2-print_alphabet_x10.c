@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /**
-  *
   *print_alphabet_x10 - prints the alphabet and a new line ten times
   *
   *Return: void
