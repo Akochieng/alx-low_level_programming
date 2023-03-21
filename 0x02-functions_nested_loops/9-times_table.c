@@ -18,8 +18,6 @@ void times_table(void)
 		{
 			if ((i * j) / 10 > 0)
 				putchar('0' + (i * j) / 10);
-			else
-				putchar(' ');
 			putchar('0' + (i * j) % 10);
 			if (j < 9)
 			{
