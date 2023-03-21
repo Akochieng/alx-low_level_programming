@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
-  *int _abs - computes the absoulute value of an interger
+  *_abs - computes the absoulute value of an interger
+  *
+  *int a - the input digit
   *
   *Return: the absolute value
   */
