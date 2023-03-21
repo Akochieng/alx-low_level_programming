@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
   *main - check code
@@ -10,8 +11,6 @@
   *Return: void
   *
   */
-void print_alphabet(void);
-
 int main(void)
 {
 	print_alphabet();
