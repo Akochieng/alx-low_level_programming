@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
-  *main -  prints _putchar followed by a new line
+  *_putchar -  prints _putchar followed by a new line
   *
   *Return: 0 (Success)
   *
   */
 
-int main(void)
+int _putchar(void)
 {
 	char word[] = "_putchar";
 	int c;
