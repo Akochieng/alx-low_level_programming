@@ -3,12 +3,15 @@
 /**
   *main - prints the last digit of a number
   *
-  *Returns: value of the last digit
-  *
+  *@n: input digit
+  *Description: prints the last digit of a number twice
+  *Return: value of the last digit
   */
 int print_last_digit(int n)
 {
 	while (n > 10)
 		n = n % 10;
-	return (n = n > 0 ? n : -n);
+	n = n > 0 ? n : -n;
+	putchar(n);
+	return (n);
 }
