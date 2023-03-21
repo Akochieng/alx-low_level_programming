@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 /**
-  *
   *int _abs - computes the absoulute value of an interger
   *
   *Return: the absolute value
