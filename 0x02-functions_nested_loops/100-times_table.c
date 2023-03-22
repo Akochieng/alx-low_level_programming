@@ -22,10 +22,14 @@ void print_times_table(int n)
 			b = 0;
 			while (b <= n)
 			{
-				if (b == n)
-					printf(" %3d\n", a * b);
-				else if (b < n)
-					printf(" %3d,", a * b);
+				if (n == 0)
+					printf("%d\n", a * b);
+				else if (b == 0)
+					printf("%d", a * b);
+				else if (b == n)
+					printf(", %3d\n", a * b);
+				else
+					printf(", %3d", a * b);
 				b++;
 			}
 			a++;
