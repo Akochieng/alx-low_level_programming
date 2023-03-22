@@ -1,5 +1,11 @@
 #include <stdio.h>
-
+/**
+  *main - prints the first 50 fibonacci numbers
+  *
+  *Description: prints the first 50 fibonacci numbers followed
+  *by a new line
+  *Return: 0 (success)
+  */
 
 
 
@@ -18,7 +24,7 @@ int main(void)
 		cur = cur + prev;
 		prev = temp;
 		counter++;
-		if (counter == 2 || counter == 50)
+		if (counter == 50)
 			printf("%ld\n", cur);
 		else if (counter < 50)
 			printf("%ld, ", cur);
