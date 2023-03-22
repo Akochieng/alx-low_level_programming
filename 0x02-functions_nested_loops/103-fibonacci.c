@@ -16,14 +16,14 @@ int main(void)
 	long int cur, prev, temp;
 	long int sum;
 
-	prev = temp = 0;
-	cur = sum = 1;
-	while (cur <= LIMIT)
+	prev = temp = sum = 0;
+	cur = 1;
+	while (cur < LIMIT)
 	{
 		temp = cur;
 		cur = cur + prev;
 		prev = temp;
-		sum = sum + cur;
+		sum = (cur % 2 == 0) ? sum + cur : sum;
 	}
 	printf("%ld\n", sum);
 	return (0);
