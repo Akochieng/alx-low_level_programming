@@ -11,7 +11,7 @@
 int _isdigit(int c)
 {
 	int digit;
-	
+
 	digit = (c >= '0' && c <= '9') ? 1 : 0;
 	return (digit);
 }
