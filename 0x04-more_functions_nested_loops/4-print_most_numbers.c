@@ -4,7 +4,6 @@
   *print_most_numbers - prints 0 to 9
   *
   *Description: prints 0 to 9 while skipping 2 and 4
-  *Return: void
   */
 void print_most_numbers(void)
 {
