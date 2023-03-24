@@ -31,4 +31,5 @@ void print_number(int n)
 	}
 
 	putchar(temp + '0');
+	putchar('\n');
 }
