@@ -7,7 +7,6 @@
   *Description: prints a number n using putchar
   *Return: void
   */
-
 void print_number(int n)
 {
 	if (n < 0)
@@ -15,11 +14,20 @@ void print_number(int n)
 		putchar('-');
 		n = -n;
 	}
+	int temp;
+
+	temp = 0;
 	while (n > 9)
 	{
-		putchar((n % 10) + '0');
+		temp = (temp + (n % 10)) * 10;
 		n = n / 10;
 	}
-	putchar(n + '0');
-	putchar('\n');
+	temp = temp + n;
+	while (temp > 9)
+	{
+		putchar((temp % 10) + '0');
+		temp = temp / 10;
+	}
+
+	putchar(temp + '0');
 }
