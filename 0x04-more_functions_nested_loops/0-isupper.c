@@ -10,8 +10,8 @@
   */
 int _isupper(int c)
 {
-	int capital;
-
-	capital = (c >= 65 && c <= 90) ? 1 : 0;
-	return (capital);
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
 }
