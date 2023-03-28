@@ -6,8 +6,6 @@
   *
   *Return: 0 success
   */
-
-//initiate an array of characters with the size 
 int main()
 {
 	int len, i, temp;
