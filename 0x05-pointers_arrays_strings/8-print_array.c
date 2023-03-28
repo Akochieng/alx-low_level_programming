@@ -7,14 +7,14 @@
   *Return: void
   */
 void print_array(int *a, int n)
-{
-	for (; n > 0; --n)
-	{
-		printf("%d", *a);
-		if (n == 1)
-			putchar('\n');
-		else
-			printf(", ");
-		a++;
-	}
+{	
+	if (n > 0)
+		for (; n > 0; --n)
+		{
+			printf("%d", *a++);
+			if (n == 1)
+				putchar('\n');
+			else
+				printf(", ");
+		}
 }
