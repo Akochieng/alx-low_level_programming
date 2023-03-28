@@ -5,7 +5,7 @@
   *@src: source string
   *Description: takes in pointers to two strings and copies contents from a src
   *to a destination.
-  *Returns: dest a pointer to the destination string
+  *Return: dest a pointer to the destination string
   */
 char *_strcpy(char *dest, char *src)
 {
