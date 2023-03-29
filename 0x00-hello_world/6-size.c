@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
-  *main - code demonstrating functionality of sizeof
-  *Return: 0 (success)
+  * main - code demonstrating functionality of sizeof
+  * Return: 0 (success)
   */
 int main(void)
 {

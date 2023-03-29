@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  *main - prints all the single digit numbers of base 10
+  *main - prints all the hexadecimal numbers
   *
   *Return: 0 (success)
   */
