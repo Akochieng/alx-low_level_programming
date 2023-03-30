@@ -12,6 +12,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	char *temp = dest;
 
-	while ((*temp++ = *src++) && n--);
+	while ((*temp++ = *src++) && n--)
+		;
 	return (dest);
 }
