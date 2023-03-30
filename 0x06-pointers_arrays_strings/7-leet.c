@@ -7,19 +7,30 @@
   *by 7 and letters l and L replaced by 1
   *Return: the encoded string
   */
-char *leet(char *a)
+char *leet(char *lz)
 {
-	do{
-		if (*a == 'a' || *a == 'A')
-			*a = 4 + '0';
-		else if (*a == 'e' || *a == 'E')
-			*a = 3 + '0';
-		else if (*a == 'o' || *a == 'O')
-			*a = 0 + '0';
-		else if (*a == 't' || *a == 'T')
-			*a = 7 + '0';
-		else if (*a == 'l' || *a == 'L')
-			*a = 1 + '0';
-	}while(*a++);
-	return (a);
+	enum encoder{
+		o = 0,
+		l = 1,
+		e = 3,
+		a = 4,
+		t = 7,
+		A = a,
+		E = e,
+		O = o,
+		T = t,
+		L = l
+	};
+
+	char *temp = lz;
+	int b;
+
+	while (*temp != '\0')
+	{
+		for(b = o; b <= L; b++)
+			if (*temp == encoder[b])
+				*temp = encoder[b];
+		temp++;
+	}
+	return (lz);
 }
