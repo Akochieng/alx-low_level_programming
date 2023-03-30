@@ -7,9 +7,24 @@
   */
 void print_number(int n)
 {
-	do {
-		putchar('0' + (n % 10));
+	int temp;
+
+	temp = 0;
+	if (n < 0)
+	{
+		n = -n;
+		putchar('-');
+	}
+	while (n > 9)
+	{
+		temp = (temp * 10) + (n % 10);
 		n = n / 10;
-	}while (n > 9);
-	putchar(n + '0');
+	}
+	temp = (temp * 10) + n;
+	while (temp > 9)
+	{
+		putchar('0' + (temp % 10));
+		temp = temp / 10;
+	}
+	putchar(temp + '0');
 }
