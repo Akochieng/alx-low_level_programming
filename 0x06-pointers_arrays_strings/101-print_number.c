@@ -13,7 +13,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		n = -n;
-		putchar('-');
+		_putchar('-');
 	}
 	while (n > 9)
 	{
@@ -23,8 +23,8 @@ void print_number(int n)
 	temp = (temp * 10) + n;
 	while (temp > 9)
 	{
-		putchar('0' + (temp % 10));
+		_putchar('0' + (temp % 10));
 		temp = temp / 10;
 	}
-	putchar(temp + '0');
+	_putchar(temp + '0');
 }
