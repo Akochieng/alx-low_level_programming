@@ -23,8 +23,6 @@ char *cap_string(char *a)
 		else if (state == IN && (*temp == ' ' || *temp == '.' || *temp == '\n' \
 				|| *temp == '\t'))
 			state = OUT;
-		else if (state == IN && (*temp >= 'A' && *temp <= 'Z'))
-			*temp = 'a' + (*temp - 'A');
 	}while (*temp++ != '\0');
 	return (a);
 }
