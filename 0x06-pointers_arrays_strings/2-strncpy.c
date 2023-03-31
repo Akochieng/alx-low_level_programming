@@ -15,7 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 	char *temp = dest;
 	int state = IN;
 
-	while (n >= 0)
+	while (n > 0)
 	{
 		if (state == IN)
 			*temp = *src;
