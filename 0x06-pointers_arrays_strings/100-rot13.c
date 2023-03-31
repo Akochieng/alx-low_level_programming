@@ -13,6 +13,8 @@ char *rot13(char *enc)
 	{
 		if (*temp >= 'a' && *temp <= 'z')
 			*temp = ((*temp - 96 + 13) % 26) + 96;
+		if (*temp >= 'A' && *temp <= 'Z')
+			*temp = ((*temp - 66 + 13) % 26) + 66;
 		temp++;
 	}
 	return (enc);
