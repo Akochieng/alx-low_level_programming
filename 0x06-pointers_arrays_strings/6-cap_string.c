@@ -9,20 +9,35 @@
   */
 char *cap_string(char *a)
 {
-	int state;
-	char *temp = a;
+	int st;
+	char *tp = a;
 
-	state = OUT;
-	do{
-		if (state == OUT && ((*temp >= 'a' && *temp <= 'z') || (*temp >= 'A' && 'Z') \
-					|| (*temp >= '0' && *temp <= '9')))
+	st = OUT;
+	do {
+		if (st == OUT)
 		{
-			state = IN;
-			*temp = (*temp >= 'a' && *temp <= 'z') ? 'A' + (*temp - 'a') : *temp;
-		}
-		else if (state == IN && (*temp == ' ' || *temp == '.' || *temp == '\n' \
-				|| *temp == '\t'))
-			state = OUT;
-	}while (*temp++ != '\0');
+			if (*tp >= 'a' && *tp <= 'z')
+			{
+				*tp = 'A' + (*tp - 'a');
+				st = IN;
+			}
+			if (*tp >= 'A' && *tp <= 'Z')
+				st = IN;
+			if (*tp >= '0' && *tp <= '9')
+				st = IN;
+			}
+		else if (st == IN)
+			switch (*tp)
+			{
+				case ' ':
+				case '.':
+				case '\n':
+				case '\t':
+					st = OUT;
+					break;
+				default:
+					break;
+			}
+	} while (*tp++ != '\0');
 	return (a);
 }
