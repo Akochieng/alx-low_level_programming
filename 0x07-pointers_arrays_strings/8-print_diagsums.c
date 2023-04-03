@@ -8,8 +8,7 @@
   *Return: null
   */
 void print_diagsums(int *a, int size)
-{
-	int sum;
-
-	while 
+{	
+	for (; (a < a + (size * (size - 1)); a++))
+		printf("%d", *a);
 }
