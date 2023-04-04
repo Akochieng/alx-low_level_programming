@@ -13,13 +13,13 @@ char *_strchr(char *s, char c)
 
 	for (;;)
 	{
-		if (*s == '\0')
-			break;
-		else if (*s == c)
+		if (*s == c)
 		{
 			*temp = *s;
 			break;
 		}
+		else if (*s == '\0')
+			break;
 
 		s++;
 	}
