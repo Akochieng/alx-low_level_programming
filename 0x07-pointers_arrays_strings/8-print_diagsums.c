@@ -9,6 +9,18 @@
   */
 void print_diagsums(int *a, int size)
 {	
-	for (; (a < a + (size * (size - 1)); a++))
-		printf("%d", *a);
+	int *ptr;
+	int i, j, sumpos, sumneg;
+
+	ptr = a;
+	sumpos = sumneg = 0;
+	for (i = 0; i < size; i++)
+		for (j = 0; j < size; j++)
+		{
+			if ((i + j) == (size - 1))
+				sumneg = sumneg + *((ptr + j) + (i * size));
+			if ( i == j)
+				sumpos = sumpos + *((ptr + j) + (i * size));
+		}
+	printf("%d, %d\n", sumpos, sumneg);
 }
