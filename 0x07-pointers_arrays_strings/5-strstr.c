@@ -16,27 +16,28 @@ char *_strstr(char *haystack, char *needle)
 	int state;
 
 	state = OFF;
-	while (*haystack != '\0')
-	{
-		if (*temp == '\0')
-			break;
-		else if (state == ON && *haystack == *temp)
+	if (*needle != '\0')
+		while (*haystack != '\0')
 		{
-			temp++;
+			if (*temp == '\0')
+				break;
+			else if (state == ON && *haystack == *temp)
+			{
+				temp++;
+			}
+			else if (state == ON && *haystack != *temp)
+			{
+				temp = needle;
+				state = OFF;
+				pos = NULL;
+			}
+			else if (state == OFF && *haystack == *temp)
+			{
+				state = ON;
+				pos = haystack;
+				temp++;
+			}
+			haystack++;
 		}
-		else if (state == ON && *haystack != *temp)
-		{
-			temp = needle;
-			state = OFF;
-			pos = NULL;
-		}
-		else if (state == OFF && *haystack == *temp)
-		{
-			state = ON;
-			pos = haystack;
-			temp++;
-		}
-		haystack++;
-	}
 	return (pos);
 }
