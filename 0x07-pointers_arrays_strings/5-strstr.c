@@ -16,7 +16,9 @@ char *_strstr(char *haystack, char *needle)
 	int state;
 
 	state = OFF;
-	if (*needle != '\0')
+	if (*needle == '\0')
+		pos = haystack;
+	else
 		while (*haystack != '\0')
 		{
 			if (*temp == '\0')
