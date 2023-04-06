@@ -14,7 +14,7 @@ int is_palindrome(char *s)
 
 	res = len = 0;
 	_strlen(s, &len);
-	if (len < 1 || len == 1)
+	if (len < 2)
 		res = 1;
 	else
 	{
@@ -32,9 +32,9 @@ int is_palindrome(char *s)
   */
 void _strlen(char *s, int *len)
 {
-	while (*s != '\0')
+	if (*s != '\0')
 	{
-		s++;
+		_strlen(s + 1, len);
 		*len += 1;
 	}
 }
