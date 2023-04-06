@@ -15,3 +15,5 @@ int wildcmp(char *s1, char *s2);
 int is_palindrome(char *s);
 int pali_checker(char *s, char *temp);
 void _strlen(char *s, int *len);
+int child_cmp(char *s1, char *s2, int *wild, int *idtcal);
+int wildcmp(char *s1, char *s2);
