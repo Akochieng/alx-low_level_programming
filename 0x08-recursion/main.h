@@ -11,3 +11,7 @@ int _putchar(char c);
 #endif
 void test_sqrt(int n, int *a);
 void divisor(int *n, int *a, int *state);
+int wildcmp(char *s1, char *s2);
+int is_palindrome(char *s);
+int pali_checker(char *s, char *temp);
+void _strlen(char *s, int *len);
