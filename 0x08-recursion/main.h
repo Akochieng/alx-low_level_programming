@@ -10,3 +10,4 @@ int is_prime_number(int n);
 int _putchar(char c);
 #endif
 void test_sqrt(int n, int *a);
+void divisor(int *n, int *a, int *state);
