@@ -26,6 +26,6 @@ int main(int argc, char **argv)
 	}
 	else
 		state = 1;
-	state == 0 ? printf("%d\n", coins) : printf("%s\n", "Error");
+	state == 0 ? printf("%d\n", coins >= 0 ? coins : 0) : printf("%s\n", "Error");
 	return (state);
 }
