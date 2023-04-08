@@ -18,13 +18,11 @@ int main(int argc, char *argv[])
 	if (argc >= 2)
 		while (--argc)
 			sum = sum + _atoi2(*++argv, &state);
-	else
-		printf("%s\n", "Error");
 	if (state == OK)
 		printf("%d\n", sum);
 	else
 		printf("%s\n", "Error");
-	return (0);
+	return (state == OK ? 0 : 1);
 }
 /**
   *_atoi2 - function that converts a string of numbers into intergers
