@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	char *temp = *argv;
 	int i = 0;
 
-	while (--argc >= 0)
+	while (--argc > 0)
 	{
 		temp++;
 	}
