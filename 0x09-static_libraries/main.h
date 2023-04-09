@@ -1,3 +1,4 @@
+#ifndef MAIN_H
 int _abs(int a);
 int _atoi(char *s);
 int _isalpha(int c);
@@ -17,3 +18,4 @@ char *_strncpy(char *dest, char *src, int n);
 char *_strpbrk(char *s, char *accept);
 unsigned int _strspn(char *s, char *accept);
 int _putchar(char c);
+#endif
