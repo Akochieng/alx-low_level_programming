@@ -6,9 +6,16 @@
   *Description: prints the number of arguments passed to it
   *Return: 0 success
   */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	**argv++;
-	printf("%d\n", argc - 1);
+	char *temp = *argv;
+	int i = 0;
+
+	while (--argc >= 0)
+	{
+		temp++;
+	}
+	i = temp - *argv;
+	printf("%d\n", i);
 	return (0);
 }
