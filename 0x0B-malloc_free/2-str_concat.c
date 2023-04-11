@@ -9,12 +9,17 @@
   */
 char *str_concat(char *s1, char *s2)
 {
-	int size;
+	int lens1, lens2;
 	char *p = NULL;
 	char *temp = NULL;
 
-	size = strlen(s1) + strlen(s2);
-	p = malloc(sizeof(char) * size);
-	temp = stpcpy(s2, stpcpy(s1, p));
+	lens1 = strlen(s1);
+	lens2 = strlen(s2);
+
+	p = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	if (p == NULL)
+		return (NULL);
+	temp = p;
+	temp = stpcpy(stpncpy(temp, s1, lens1), s2);
 	return (p);
 }
