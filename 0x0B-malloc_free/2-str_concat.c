@@ -13,10 +13,12 @@ char *str_concat(char *s1, char *s2)
 	char *p = NULL;
 	char *temp = NULL;
 
-	lens1 = strlen(s1);
-	lens2 = strlen(s2);
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	lens1 = (s1 == NULL) ? 0 : strlen(s1);
+	lens2 = (s2 == NULL) ? 0 : strlen(s2);
 
-	p = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	p = (lens1 + lens2 == 0) ? NULL : malloc(sizeof(char) * (lens1 + lens2 + 1));
 	if (p == NULL)
 		return (NULL);
 	temp = p;
