@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 /**
   *_calloc - allocates memory of nmemb elements of size bytes
   *@nmemb: number of elements
@@ -16,9 +17,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	p = malloc(nmemb * size);
+	num = nmemb * size;
+	p = malloc(num);
 	if (p == NULL)
 		return (NULL);
-	strcpy(p, '0' * size);
+	memset(p, 0, num);
 	return (p);
 }
