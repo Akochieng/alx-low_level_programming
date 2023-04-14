@@ -15,9 +15,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *temp;
 
-	if (new_size == old_size)
+	if (new_size == old_size && ptr != NULL)
 		return (ptr);
-	if (new_size > old_size)
+	if (new_size > old_size || ptr == NULL)
 	{
 		temp = malloc(new_size);
 		if (temp == NULL)
@@ -25,6 +25,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (ptr != NULL)
 			memcpy(temp, ptr, old_size);
 	}
-	free(ptr);
+	if (ptr != NULL)
+		free(ptr);
 	return (temp);
 }
