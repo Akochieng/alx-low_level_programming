@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>
+#include "main.h"
 /**
   *main - print the largest prime number that can divide 612852475143
   *
@@ -12,7 +12,7 @@ int main(void)
 	long int n, primenum;
 
 	n = 612852475143;
-	while (primenum < sqrt(n))
+	while (primenum < n / 2)
 	{
 		primenum = primecalc(n);
 		while (n % primenum == 0 && n != primenum)
@@ -35,8 +35,8 @@ long int primecalc(long int n)
 {
 	long int num = 2;
 
-	while (n % num != 0 && num++ < sqrt(n))
+	while (n % num != 0 && num++ < n / 2)
 		;
-	num = num < sqrt(n) ? num : n;
+	num = num < n / 2 ? num : n;
 	return (num);
 }
