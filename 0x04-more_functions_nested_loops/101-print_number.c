@@ -16,20 +16,17 @@ void print_number(int n)
 		putchar('-');
 		n = -n;
 	}
-
 	temp = 0;
 	while (n > 9)
 	{
-		temp = (temp + (n % 10)) * 10;
+		temp = temp * 10 + n % 10;
 		n = n / 10;
 	}
-	temp = temp + n;
+	temp = temp * 10 + n;
 	while (temp > 9)
 	{
 		putchar((temp % 10) + '0');
 		temp = temp / 10;
 	}
-
 	putchar(temp + '0');
-	putchar('\n');
 }
