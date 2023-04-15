@@ -8,16 +8,16 @@
  */
 int main(void)
 {
-	/*
+
 	print_number(98);
 	putchar('\n');
 	print_number(402);
 	putchar('\n');
 	print_number(1024);
-	putchar('\n');*/
+	putchar('\n');
 	print_number(10);
-	putchar('\n');/*
+	putchar('\n');
 	print_number(-98);
-	putchar('\n');*/
+	putchar('\n');
 	return (0);
 }

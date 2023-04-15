@@ -24,8 +24,8 @@ void print_number(int n)
 	while (divider > 9)
 	{
 		_putchar((n / divider) + '0');
-		divider = divider / 10;
 		n = n % divider;
+		divider = divider / 10;
 	}
 	_putchar(n + '0');
 }
