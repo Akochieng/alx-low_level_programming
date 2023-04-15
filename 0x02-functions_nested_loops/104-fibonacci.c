@@ -18,7 +18,7 @@ int main(void)
 	prev = temp = 0;
 	counter = 1;
 	cur = 1;
-	while (counter < 98)
+	while (counter <= 98)
 	{
 		temp = cur;
 		cur = cur + prev;
