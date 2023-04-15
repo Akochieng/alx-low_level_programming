@@ -10,24 +10,39 @@
   */
 void print_number(int n)
 {
-	int temp;
+	int count, divider;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
-	temp = 0;
+	count = n > 9 ? countnum(n) : 1;
+	divider = 1;
+	while (count-- > 0)
+		divider = divider * 10;
+	while (divider > 9)
+	{
+		_putchar((n / divider) + '0');
+		divider = divider / 10;
+		n = n % divider;
+	}
+	_putchar(n + '0');
+}
+/**
+  *countnum - counts the length of a number
+  *@n: the number
+  *Description: calculates the length of a number
+  *Return: the length of a number
+  */
+int countnum(int n)
+{
+	int count = 0;
+
 	while (n > 9)
 	{
-		temp = temp * 10 + n % 10;
 		n = n / 10;
+		count++;
 	}
-	temp = temp * 10 + n;
-	while (temp > 9)
-	{
-		_putchar((temp % 10) + '0');
-		temp = temp / 10;
-	}
-	_putchar(temp + '0');
+	return (count);
 }

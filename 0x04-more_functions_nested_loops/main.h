@@ -12,3 +12,4 @@ void print_triangle(int size);
 void print_number(int n);
 int _putchar(char c);
 long int primecalc(long int n);
+int countnum(int n);
