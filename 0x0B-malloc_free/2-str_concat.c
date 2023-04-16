@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	return (p);
 }
 /**
-  *_strlen: calculate the length of a string
+  *_strlen - calculate the length of a string
   *@s: the string
   *
   *Return: length of the string
