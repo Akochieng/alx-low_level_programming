@@ -13,15 +13,30 @@ char *str_concat(char *s1, char *s2)
 	char *p = NULL;
 	char *temp = NULL;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	lens1 = (s1 == NULL) ? 0 : strlen(s1);
-	lens2 = (s2 == NULL) ? 0 : strlen(s2);
-
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	lens1 = _strlen(s1);
+	lens2 = _strlen(s2);
 	p = (lens1 + lens2 == 0) ? NULL : malloc(sizeof(char) * (lens1 + lens2 + 1));
 	if (p == NULL)
 		return (NULL);
 	temp = p;
 	temp = stpcpy(stpncpy(temp, s1, lens1), s2);
 	return (p);
+}
+/**
+  *_strlen: calculate the length of a string
+  *@s: the string
+  *
+  *Return: length of the string
+  */
+int _strlen(char *s)
+{
+	int len;
+
+	for (len = 0; *s != '\0'; ++len)
+		s++;
+	return (len);
 }
