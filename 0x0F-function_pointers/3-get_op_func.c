@@ -4,8 +4,6 @@
 /**
   *get_op_func - processes the input sign and applies the right function
   *@s: the sign
-  *@a: int
-  *@b: int
   *Description: takes in a sign and uses it to determine the function to
   *use it in.
   *Return: result of the function used
@@ -23,7 +21,10 @@ int (*get_op_func(char *s))(int a, int b)
 	int i = 0;
 
 	while ((ops + i)->op != NULL)
+	{
 		if (*s == *((ops + i)->op))
 			return ((ops + i)->f);
+		i++;
+	}
 	return (NULL);
 }
