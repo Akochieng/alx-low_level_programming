@@ -5,7 +5,7 @@
   *array_iterator - performs action on each of the elements of an array
   *@array: the array to be worked on
   *@size: the size of the array
-  *action: the function that determines the action
+  *@action: the function that determines the action
   *
   *Return: void
   */
