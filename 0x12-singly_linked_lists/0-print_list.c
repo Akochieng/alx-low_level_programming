@@ -28,7 +28,7 @@ size_t print_list(const list_t *h)
   *
   *Return: length of the string(unsigned int)
   */
-unsigned int _strlen(char *s)
+unsigned int _strlen(const char *s)
 {
 	unsigned int len = 0;
 
