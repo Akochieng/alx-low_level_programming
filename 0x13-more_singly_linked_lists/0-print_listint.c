@@ -30,11 +30,11 @@ size_t print_listint(const listint_t *h)
   *
   *Return: number of characters printed
   */
-int print_int(int num)
+size_t print_int(int num)
 {
 	if (num < 10)
 		return (_putchar(num + '0'));
-	return (print_int((num / 10) + _putchar((num % 10) + '0')));
+	return (print_int(num / 10) + _putchar((num % 10) + '0'));
 }
 /**
   *_putchar - prints a character to the stdout
@@ -42,7 +42,7 @@ int print_int(int num)
   *
   *Return: number of characters printed
   */
-int _putchar(char c)
+size_t _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
