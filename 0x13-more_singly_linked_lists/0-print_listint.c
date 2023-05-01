@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "lists.h"
 #include <stddef.h>
-#include <unistd.h>
 #include <stdlib.h>
 /**
   *print_listint - prints all the elements of a list
@@ -35,14 +34,4 @@ size_t print_int(int num)
 	if (num < 10)
 		return (_putchar(num + '0'));
 	return (print_int(num / 10) + _putchar((num % 10) + '0'));
-}
-/**
-  *_putchar - prints a character to the stdout
-  *@c: the character to be printed
-  *
-  *Return: number of characters printed
-  */
-size_t _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
