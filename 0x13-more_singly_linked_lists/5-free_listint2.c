@@ -17,8 +17,7 @@ void free_listint2(listint_t **head)
 		*head = NULL;
 		return;
 	}
-	cur = (*head)->next;
-	free(*head);
-	*head = cur;
-	free_listint2(head);
+	cur = *head;
+	free_listint2(&(cur->next));
+	free(cur);
 }
