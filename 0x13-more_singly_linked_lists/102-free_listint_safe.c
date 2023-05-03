@@ -22,6 +22,6 @@ size_t free_listint_safe(listint_t **h)
 		size += sizeof(listint_t);
 		cur = nxt;
 	}
-	*h = NULL;
+	*h = cur = NULL;
 	return (size);
 }
