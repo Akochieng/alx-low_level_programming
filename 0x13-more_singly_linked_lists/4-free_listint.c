@@ -13,11 +13,6 @@ void free_listint(listint_t *head)
 
 	if (head == NULL)
 		return;
-	if (!(head->next))
-	{
-		free(head);
-		return;
-	}
 	cur = head;
 	free_listint(cur->next);
 	free(head);
