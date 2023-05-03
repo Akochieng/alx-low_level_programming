@@ -1,7 +1,13 @@
 #include "lists.h"
 #include <stddef.h>
 #include <stdlib.h>
-
+/**
+  *delete_nodeint_at_index - deletes a node given the index
+  *@head: pointer to the head
+  *@index: the location of the node
+  *Description: uses index to find a node and delete it
+  *Return: the value of n in the node
+  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
