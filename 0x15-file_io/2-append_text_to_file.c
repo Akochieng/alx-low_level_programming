@@ -5,22 +5,20 @@
 #include <stdio.h>
 #include <fcntl.h>
 /**
-  *create_file - create a file with permission 0600
+  *append_text_to_file - append text to file
   *@filename: name of the file
   *@text_content: the content to be printed to the file
   *
   *Return: the number of characters writen to the file
   */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
 	size_t len;
-	mode_t mode;
 
-	mode = 0600;
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, mode);
+	fd = open(filename, O_WRONLY);
 	if (fd == -1)
 		return (0);
 	len = _strlen(text_content);
