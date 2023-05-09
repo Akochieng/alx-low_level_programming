@@ -24,10 +24,9 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (0);
 	len = _strlen(text_content);
-	if (len == 0)
-		return (0);
-	if (write(fd, text_content, len) == -1)
-		return (-1);
+	if (len > 0)
+		if (write(fd, text_content, len) == -1)
+			return (-1);
 	close(fd);
 	return (1);
 }
