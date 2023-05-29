@@ -25,9 +25,9 @@ int main(void)
 		prev = temp;
 		counter++;
 		if (counter == 98)
-			printf("%.0Lf\n", cur);
+			printf("%ld\n", cur);
 		else if (counter < 98)
-			printf("%.0Lf, ", cur);
+			printf("%ld, ", cur);
 	}
 	return (0);
 }

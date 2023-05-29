@@ -19,5 +19,13 @@ int main(void)
 	putchar('\n');
 	print_number(-98);
 	putchar('\n');
+	print_number(0);
+	putchar('\n');
+	print_number(0);
+	putchar('\n');
+	print_number(-1);
+	putchar('\n');
+	print_number(1);
+	putchar('\n');
 	return (0);
 }
