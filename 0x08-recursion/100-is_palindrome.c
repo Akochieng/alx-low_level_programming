@@ -37,9 +37,7 @@ int pali_check(char *s, char *a)
   */
 int _strlen(char *s)
 {
-	int a = 0;
-
-	while (s[a])
-		a++;
-	return (a);
+	if (!(*s))
+		return (0);
+	return (1 + _strlen(++s));
 }
