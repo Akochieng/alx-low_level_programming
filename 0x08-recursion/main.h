@@ -12,4 +12,6 @@ int wildcmp(char *s1, char *s2);
 int _putchar(char c);
 int sqrt_spt(int x, int n);
 int prime_test(int x, int n);
+int pali_check(char *s, char *a);
+int _strlen(char *s);
 #endif
