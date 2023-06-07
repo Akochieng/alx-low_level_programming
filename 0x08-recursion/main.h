@@ -11,4 +11,5 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int _putchar(char c);
 int sqrt_spt(int x, int n);
+int prime_test(int x, int n);
 #endif
