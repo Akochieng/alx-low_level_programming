@@ -13,5 +13,8 @@ int _putchar(char c);
 int sqrt_spt(int x, int n);
 int prime_test(int x, int n);
 int pali_check(char *s, char *a);
+int simple_comp(char *a, char *b);
+int check_wild(char *b);
 int _strlen(char *s);
+int wild_comp(char *s1, char *s2);
 #endif
