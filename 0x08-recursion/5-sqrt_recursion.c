@@ -1,4 +1,6 @@
 #include "main.h"
+#include <limits.h>
+#include <stdio.h>
 /**
   *_sqrt_recursion - function to compute the square root of a function
   *@n: the number whose square root is to be computed
@@ -26,7 +28,9 @@ int sqrt_spt(int x, int n)
 {
 	if (x * x == n)
 		return (x);
-	else if (x * x < n)
+	if (x * x == -1 || x * x == 0)
+		return (sqrt_spt(x / 2, n));
+	if (x * x < n)
 		return (-1);
 	return (sqrt_spt(x - 1, n));
 }
