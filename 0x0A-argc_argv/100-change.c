@@ -20,12 +20,15 @@ int main(int argc, char **argv)
 	}
 	coins = 0;
 	value = atoi(argv[1]);
-	for (i = 0; i < 4; i++)
+	if (value >= 0)
 	{
-		coins += value / denominations[i];
-		value = value % denominations[i];
+		for (i = 0; i < 4; i++)
+		{
+			coins += value / denominations[i];
+			value = value % denominations[i];
+		}
+		coins += value;
 	}
-	coins += value;
 	printf("%d\n", coins);
 	return (0);
 }
