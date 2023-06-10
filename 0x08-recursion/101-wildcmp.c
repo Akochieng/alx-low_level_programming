@@ -43,8 +43,9 @@ int wild_comp(char *s1, char *s2)
 	{
 		if (*(++temp) == '*')
 			return (1 && wild_comp(s1, ++s2));
-		else if (*(++temp) == *s1)
-			return (1 && wild_comp(++s1, ++s2));
+		temp = s2;
+		if (*(++temp) == *s1)
+			return (1 && wild_comp(s1, ++s2));
 		else
 			return (1 && wild_comp(++s1, s2));
 	}
