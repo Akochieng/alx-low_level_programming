@@ -19,10 +19,12 @@ char *str_concat(char *s1, char *s2)
 	constr = temp;
 	if (temp)
 	{
-		for ( ; *s1; s1++, temp++)
-			*temp = *s1;
-		for ( ; *s2; s2++, temp++)
-			*temp = *s2;
+		if (*s1)
+			for ( ; *s1; s1++, temp++)
+				*temp = *s1;
+		if (*s2)
+			for ( ; *s2; s2++, temp++)
+				*temp = *s2;
 		*temp = '\0';
 	}
 	return (constr);
