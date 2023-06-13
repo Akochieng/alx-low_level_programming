@@ -39,6 +39,8 @@ size_t _strlen(char *s)
 {
 	size_t len = 0;
 
+	if (s == NULL)
+		return (len);
 	for (len = 0; *s; s++, len++)
 		;
 	return (len);
