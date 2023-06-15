@@ -1,6 +1,10 @@
 #include "main.h"
 /**
+  *array_range - create memory and copy values between min and max
+  *@min: the minimum value
+  *@max: the max value
   *
+  *Return: the created memory
   */
 int *array_range(int min, int max)
 {

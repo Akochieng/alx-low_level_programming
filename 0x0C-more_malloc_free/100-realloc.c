@@ -1,6 +1,11 @@
 #include "main.h"
 /**
+  *_realloc - creates new array of size new_size and copy contents from ptr
+  *@ptr: pointer to old memory
+  *@old_size: the current size of ptr
+  *@new_size: the new size of the memory
   *
+  *Return: pointer to the created memory
   */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -20,7 +25,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	return (temp);
 }
-
+/**
+  *dup_mem - copies contents of one memory to the other
+  *@src: the memory location to be copied from
+  *@dest: the memory location to be copied to
+  *@n:the number of bytes to be copied
+  *
+  *Return: void
+  */
 void dup_mem(void *src, void *dest, unsigned int n)
 {
 	unsigned int i;
