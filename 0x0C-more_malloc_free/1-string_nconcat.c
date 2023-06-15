@@ -17,9 +17,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	temp = malloc(size);
 	if (temp == NULL)
 		return (NULL);
-	for (pos = 0; *s1 == '\0' ; pos++)
+	for (pos = 0; *s1 != '\0'; pos++)
 		temp[pos] = *s1++;
-	for ( ; (pos < size && *s2 == '\0'); pos++)
+	for ( ; (pos < size && *s2 != '\0'); pos++)
 		temp[pos] = *s2++;
 	temp[pos] = '\0';
 	return (temp);
@@ -35,7 +35,7 @@ unsigned int _strlen(char *s)
 	unsigned int len = 0;
 
 	if (!(s == NULL))
-		for (len = 0; *s == '\0'; s++)
+		for (len = 0; *s != '\0'; s++)
 			len++;
 	return (len);
 }
