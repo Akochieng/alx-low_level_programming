@@ -1,14 +1,15 @@
 #ifndef MAIN_H
 #define MAIN_H
 /**
-  *dog - struct to define the characteristics of a dog
+  *struct dog - struct to define the characteristics of a dog
   *@name: the name of the dog
   *@age: the age of the dog
   *@owner: the owner of the dog
   *Description: struct defining the details of a dog including
   *the owner
   */
-typedef struct dog{
+typedef struct dog
+{
 	char *name;
 	float age;
 	char *owner;
