@@ -14,6 +14,11 @@ void print_all(const char * const format, ...)
 	float f;
 	unsigned int i = 0;
 
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 	va_start(args, format);
 	while ((a = format[i++]) != '\0')
 	{
