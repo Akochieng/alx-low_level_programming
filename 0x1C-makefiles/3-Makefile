@@ -4,16 +4,16 @@ OBJ=$(SRC:.c=.o)
 NAME=school
 RM := rm -f
 
-all: school
+all: verify_obj school
 
-school: verify-OBJ $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
-
-verify-OBJ:
+verify_obj:
 	@if [ "$(OBJ)" != "$(SRC:.c=.o)" ]; then \
 		$(RM) $(OBJ); \
 		$(MAKE) $(SRC:.c=.o); \
 	fi
+
+school: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 re: $(SRC)
 	$(CC) -c $(SRC)

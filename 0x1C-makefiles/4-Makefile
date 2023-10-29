@@ -1,0 +1,29 @@
+CC=gcc
+SRC := main.c school.c
+OBJ=$(SRC:.c=.o)
+NAME := school
+RM := rm -f
+CFLAGS := -Wall -Werror -Wextra -pedantic
+
+all: verify_obj school
+
+verify_obj: @if [ "$(OBJ)" != "$(SRC:.c=.o)" ]; then \
+		$(RM) $(OBJ); \
+		$(MAKE) $(SRC:.c=.o); \
+		fi
+
+school: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ)
+
+re:
+	$(RM) $(OBJ)
+	$(MAKE) $(SRC:.c=.o)
+
+clean:
+	$(RM) .*.swp *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean:
+	$(RM) $(OBJ) .*.swp *~ $(NAME)
